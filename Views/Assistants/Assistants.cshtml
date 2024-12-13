@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Assistant> 
+
+@section HeroImage {
+    <img src="https://cdn.prod.website-files.com/6303b6d32a466a2fa9dcf143/63c524cb98759b65b8e38033_young-female-doctor.webp" alt="Hero Image">
+}
+
+
+@section HeroTitle{
+
+    Meet Our Assistants
+}
+
+@section HeroSubtitle{
+
+    Your child's health, our priority
+}
+
+
+<div class="doctor-grid">
+    @foreach (var assistant in Model)
+    {
+        <div class="doctor-card">
+            <div class="doctor-image">
+            <img src="https://via.placeholder.com/150" alt="Doctor Photo">
+        </div>
+        <div class="doctor-info">
+            <h2>@assistant.FirstName @assistant.LastName</h2>
+            <p>@assistant.Email</p>
+        </div>
+            <!-- Show admin actions if the user is an admin -->
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="admin-actions">
+                    <a href="@Url.Action("Edit", "Assistants", new { id = assistant.AssistantID })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "Assistants", new { id = assistant.AssistantID })" class="btn btn-danger">Delete</a>
+                    <a href="@Url.Action("AssignShift", "Assistants", new { id = assistant.AssistantID })" class="btn btn-primary">Assign Shift</a>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+<!-- Admin button to add new assistant -->
+@if (User.IsInRole("Admin"))
+{
+    <div class="admin-actions">
+        <a href="@Url.Action("Create", "Assistants")" class="btn btn-success">Add New Assistant</a>
+    </div>
+}
+
+
+
+
+
+
+

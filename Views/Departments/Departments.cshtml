@@ -1,0 +1,58 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model List<Department>
+
+@section HeroImage {
+    <img src="https://cdn.prod.website-files.com/6303b6d32a466a2fa9dcf143/6303b6d32a466a16f2dcf2b2_practitioner-woman-doctor.webp">
+}
+
+@section HeroTitle {
+
+   Our Departments
+}
+
+@section HeroSubtitle {
+
+    best care for your child
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/depStyle.css" asp-append-version="true" />
+</head>
+
+@{
+    var departmentImages = new Dictionary<string, string>
+    {
+        { "Çocuk Acil", "https://cdn.prod.website-files.com/6303b6d32a466a2fa9dcf143/635a60fee448c965dc9b7122_Pediatric-03-p-1080.webp" },
+        { "Çocuk Yoğun Bakımı", "https://cdn.prod.website-files.com/6303b6d32a466a2fa9dcf143/6661971c4d91e23b0137be3b_Pediatric%20Orthopedic%20Surgery-2.webp" },
+        { "Çocuk Hematolojisi ve Onkolojisi", "https://cdn.prod.website-files.com/6303b6d32a466a2fa9dcf143/6303b6d32a466a16f2dcf2b2_practitioner-woman-doctor.webp" }
+        // Add more departments and their images here
+    };
+}
+
+
+<div class="container">
+    @foreach (var department in Model)
+    {
+        <div class="card card-custom">
+            <div class="row no-gutters">
+                <div class="col-7">
+                    <div class="card-body">
+                        <h3 class="card-title my-4">@department.Name</h3>
+                        <p class="card-text">@department.Description</p>
+                        <a href="#" class="read-more-btn">Read More</a>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="custom-image-wrapper">
+                        <!-- Use the department name to get the image -->
+                        <img class="custom-image" src="@departmentImages[department.Name]" alt="Department Image">
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

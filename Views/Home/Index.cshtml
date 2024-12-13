@@ -1,0 +1,63 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+@section HeroImage{
+
+    <img src="https://alsalamhospital.com.sa/uploads/2023/09/inner-11.webp" />
+}
+
+@section HeroTitle{
+
+    Welcome to The Pediatrics Group
+}
+
+@section HeroSubtitle{
+
+    Your child's health, our priority
+}
+<body>
+<section id="features" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Features</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Assistant Scheduling</h5>
+                        <p class="card-text">Easily assign shifts and manage daily schedules for assistants.</p>
+                        <a href="#" class="btn ">Go to Scheduling</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Department Overview</h5>
+                        <p class="card-text">View department-specific details like capacity and patient load.</p>
+                        <a href="#" class="btn ">View Departments</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Appointment System</h5>
+                        <p class="card-text">Schedule and manage meetings with faculty.</p>
+                        <a href="#" class="btn">Manage Appointments</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+

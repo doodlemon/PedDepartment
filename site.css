@@ -1,0 +1,208 @@
+.gradient-wrapper {
+    background: linear-gradient(57deg, #4e97b8, #0000 89%); /* Blue gradient */
+    padding: 20px 0; /* Adjust height as needed */
+    text-align: center; /* Optional, for centering text */
+    color: white; /* Text color */
+}
+
+body {
+    background-color: white;
+}
+
+.nav-item .nav-link {
+    font-style: none;
+    color: white !important;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    box-shadow: #17a2b8;
+}
+
+.nav-item:hover {
+    background-color: #60b5dc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+    .hero img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(57deg, #4e97b8, #0000 89%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 2; /* Makes sure the text is above the gradient */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white; /* Text color */
+}
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Adjust as needed */
+        margin: 0;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem; /* Adjust as needed */
+        margin: 10px 0 0;
+    }
+
+.card {
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+.btn {
+    background-color: #2b93bf !important;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+.footer a {
+   color: #17a2b8;
+   text-decoration: none;
+
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.page-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Grid Container */
+.doctor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+/* Doctor Card */
+.doctor-card {
+    position: relative;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: visible; /* Allows the circle to extend beyond the card */
+    text-align: center;
+    padding-top: 60px; /* Space for the circle */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Circle for the Doctor's Image */
+.doctor-image {
+    position: absolute;
+    top: -50px; /* Moves the circle up, outside the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #317796;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensures the circle is above other elements */
+}
+
+    .doctor-image img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+/* Information Container */
+.doctor-info {
+    padding: 20px;
+    padding-top: 60px; /* Leaves space for the image circle */
+}
+
+    .doctor-info h2 {
+        font-size: 1.2rem;
+        color: #317796;
+        margin-bottom: 5px;
+    }
+
+    .doctor-info p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+/* Hover Effect */
+.doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgb(255, 255, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .doctor-image {
+        width: 80px;
+        height: 80px;
+    }
+
+        .doctor-image img {
+            width: 70px;
+            height: 70px;
+        }
+}
+
+
+
